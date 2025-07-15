@@ -4,8 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-blog',
   imports: [],
   templateUrl: './blog.html',
-  styleUrl: './blog.scss'
+  styleUrls: ['./blog.scss']
 })
-export class Blog {
+export class BlogComponent {
 
 }

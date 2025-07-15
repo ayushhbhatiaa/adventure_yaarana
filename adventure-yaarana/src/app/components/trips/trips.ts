@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-trips',
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './trips.html',
-  styleUrl: './trips.scss'
+  styleUrls: ['./trips.scss']
 })
-export class Trips {
+export class TripsComponent {
 
 }
