@@ -12,7 +12,10 @@
       </div>
       <div class="hero-image">
         <div class="hero-card">
-          <img src="assets/logo.svg" alt="Adventure Yaarana" class="hero-logo">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Adventure Yaarana - Mountain Adventure" class="hero-adventure-img">
+          <div class="hero-logo-overlay">
+            <img src="assets/logo.svg" alt="Adventure Yaarana Logo" class="hero-logo">
+          </div>
         </div>
       </div>
     </div>
@@ -84,24 +87,30 @@
     <div class="container">
       <h2 class="section-title">Popular Destinations</h2>
       <div class="destinations-grid">
-        <div class="destination-card">
-          <div class="destination-image"></div>
+        <div class="destination-card" (click)="openDestinationModal('goa')">
+          <div class="destination-image">
+            <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Goa Beach Paradise">
+          </div>
           <div class="destination-content">
             <h3>Goa Beach Paradise</h3>
             <p>Sun, sand, and sea await you in India's favorite beach destination.</p>
             <span class="price">Starting from ₹8,999</span>
           </div>
         </div>
-        <div class="destination-card">
-          <div class="destination-image himalaya"></div>
+        <div class="destination-card" (click)="openDestinationModal('himalaya')">
+          <div class="destination-image">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Himalayan Trek">
+          </div>
           <div class="destination-content">
             <h3>Himalayan Trek</h3>
             <p>Breathtaking mountain views and challenging treks in the Himalayas.</p>
             <span class="price">Starting from ₹15,999</span>
           </div>
         </div>
-        <div class="destination-card">
-          <div class="destination-image rajasthan"></div>
+        <div class="destination-card" (click)="openDestinationModal('rajasthan')">
+          <div class="destination-image">
+            <img src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Rajasthan Royal Tour">
+          </div>
           <div class="destination-content">
             <h3>Rajasthan Royal Tour</h3>
             <p>Experience the rich culture and majestic palaces of Rajasthan.</p>
@@ -125,4 +134,48 @@
       </div>
     </div>
   </section>
+
+  <!-- Destination Modal -->
+  <div class="modal-overlay" *ngIf="isDestinationModalOpen" (click)="closeDestinationModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()" *ngIf="selectedDestination">
+      <button class="modal-close" (click)="closeDestinationModal()" aria-label="Close modal">×</button>
+      
+      <div class="modal-header">
+        <img [src]="selectedDestination.image" [alt]="selectedDestination.name" class="modal-image">
+        <div class="modal-title-section">
+          <h2>{{ selectedDestination.name }}</h2>
+          <p class="modal-location">📍 {{ selectedDestination.location }}</p>
+          <div class="modal-price">{{ selectedDestination.price }}</div>
+        </div>
+      </div>
+      
+      <div class="modal-body">
+        <p class="modal-description">{{ selectedDestination.description }}</p>
+        
+        <div class="modal-highlights">
+          <h3>Highlights</h3>
+          <ul>
+            <li *ngFor="let highlight of selectedDestination.highlights">{{ highlight }}</li>
+          </ul>
+        </div>
+        
+        <div class="modal-details">
+          <div class="detail-item">
+            <strong>Duration:</strong> {{ selectedDestination.duration }}
+          </div>
+          <div class="detail-item">
+            <strong>Best Time:</strong> {{ selectedDestination.bestTime }}
+          </div>
+          <div class="detail-item">
+            <strong>Difficulty:</strong> {{ selectedDestination.difficulty }}
+          </div>
+        </div>
+        
+        <div class="modal-actions">
+          <a routerLink="/contact" class="btn btn-primary" (click)="closeDestinationModal()">Book Now</a>
+          <a routerLink="/trips" class="btn btn-secondary" (click)="closeDestinationModal()">View All Trips</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

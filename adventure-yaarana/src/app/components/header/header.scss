@@ -1,11 +1,12 @@
 .header {
-  background: linear-gradient(135deg, #1e3a5f 0%, #2c5aa0 100%);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: var(--gradient-primary);
+  box-shadow: 0 4px 20px var(--shadow);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
+  transition: background 0.3s ease;
 }
 
 .navbar {
@@ -44,7 +45,7 @@
     left: -100%;
     top: 80px;
     flex-direction: column;
-    background: linear-gradient(135deg, #1e3a5f 0%, #2c5aa0 100%);
+    background: var(--gradient-primary);
     width: 100%;
     text-align: center;
     transition: 0.3s;
@@ -73,14 +74,52 @@
   }
   
   &.contact-btn {
-    background: linear-gradient(135deg, #ff7043 0%, #ff5722 100%);
+    background: linear-gradient(135deg, var(--accent-color) 0%, #d84315 100%);
     color: white;
     padding: 12px 25px;
     
     &:hover {
-      background: linear-gradient(135deg, #ff5722 0%, #d84315 100%);
+      background: linear-gradient(135deg, #d84315 0%, #bf360c 100%);
       box-shadow: 0 5px 15px rgba(255, 87, 34, 0.3);
     }
+  }
+}
+
+// Theme Toggle Button in Navigation
+.theme-toggle-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  padding: 10px 16px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .toggle-icon {
+    font-size: 16px;
+  }
+
+  .toggle-text {
+    @media (max-width: 480px) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 8px 14px;
   }
 }
 

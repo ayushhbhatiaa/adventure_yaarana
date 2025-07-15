@@ -32,6 +32,7 @@ export class HeaderComponent implements OnInit {
     { label: 'Our Trips', route: '/trips' },
     { label: 'Services', route: '/services' },
     { label: 'Gallery', route: '/gallery' },
+    { label: 'Adventure Vault', route: '/adventure-vault' },
     { label: 'Blog', route: '/blog' },
     { label: 'Contact Us', route: '/contact', isContactButton: true }
   ];
