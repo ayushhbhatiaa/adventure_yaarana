@@ -1,0 +1,24 @@
+// Alternative App Component Styles
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+// Basic layout
+main {
+  flex: 1;
+  padding: 0;
+  margin: 0;
+}
+
+// Router outlet styles
+router-outlet {
+  display: block;
+  flex: 1;
+}

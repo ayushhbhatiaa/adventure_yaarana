@@ -3,18 +3,16 @@
     <div class="nav-container">
       <div class="nav-logo">
         <a routerLink="/">
-          <img src="assets/logo.svg" alt="Adventure Yaarana" class="logo">
+          <img [src]="companyInfo.logoPath" [alt]="companyInfo.name" class="logo">
         </a>
       </div>
       
       <div class="nav-menu" [class.active]="isMenuOpen">
-        <a routerLink="/" class="nav-link" (click)="closeMenu()">Home</a>
-        <a routerLink="/about" class="nav-link" (click)="closeMenu()">About</a>
-        <a routerLink="/trips" class="nav-link" (click)="closeMenu()">Our Trips</a>
-        <a routerLink="/services" class="nav-link" (click)="closeMenu()">Services</a>
-        <a routerLink="/gallery" class="nav-link" (click)="closeMenu()">Gallery</a>
-        <a routerLink="/blog" class="nav-link" (click)="closeMenu()">Blog</a>
-        <a routerLink="/contact" class="nav-link contact-btn" (click)="closeMenu()">Contact Us</a>
+        <a *ngFor="let link of navigationLinks" 
+           [routerLink]="link.route" 
+           class="nav-link" 
+           [class.contact-btn]="link.isContactButton"
+           (click)="closeMenu()">{{ link.label }}</a>
       </div>
       
       <div class="hamburger" [class.active]="isMenuOpen" (click)="toggleMenu()">
