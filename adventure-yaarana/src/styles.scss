@@ -1,3 +1,10 @@
+/* Import Poppins Font */
+@import '@fontsource/poppins';
+@import '@fontsource/poppins/400.css';
+@import '@fontsource/poppins/500.css';
+@import '@fontsource/poppins/600.css';
+@import '@fontsource/poppins/700.css';
+
 /* Global Styles for Adventure Yaarana */
 * {
   margin: 0;
@@ -5,12 +12,56 @@
   box-sizing: border-box;
 }
 
+/* Theme Variables */
+:root {
+  --primary-color: #1e3a5f;
+  --secondary-color: #2c5aa0;
+  --accent-color: #ff6b35;
+  --text-primary: #333;
+  --text-secondary: #666;
+  --background-primary: #ffffff;
+  --background-secondary: #f8f9fa;
+  --card-background: #ffffff;
+  --border-color: #e0e0e0;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --gradient-primary: linear-gradient(135deg, #1e3a5f 0%, #2c5aa0 100%);
+  --gradient-hero: linear-gradient(135deg, rgba(30, 58, 95, 0.9) 0%, rgba(44, 90, 160, 0.9) 100%);
+}
+
+[data-theme="dark"] {
+  --primary-color: #4a90e2;
+  --secondary-color: #6bb6ff;
+  --accent-color: #ff6b35;
+  --text-primary: #ffffff;
+  --text-secondary: #b0b0b0;
+  --background-primary: #1a1a1a;
+  --background-secondary: #2d2d2d;
+  --card-background: #2a2a2a;
+  --border-color: #404040;
+  --shadow: rgba(0, 0, 0, 0.3);
+  --gradient-primary: linear-gradient(135deg, #4a90e2 0%, #6bb6ff 100%);
+  --gradient-hero: linear-gradient(135deg, rgba(74, 144, 226, 0.9) 0%, rgba(107, 182, 255, 0.9) 100%);
+}
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.6;
-  color: #333;
-  background-color: #fff;
+  color: var(--text-primary);
+  background: var(--background-primary);
   min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* Add a beautiful background pattern */
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(74, 144, 226, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 0% 50%, rgba(255, 107, 53, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 100% 50%, rgba(30, 58, 95, 0.05) 0%, transparent 50%);
+}
+
+[data-theme="dark"] body {
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(74, 144, 226, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 0% 50%, rgba(255, 107, 53, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 100% 50%, rgba(107, 182, 255, 0.1) 0%, transparent 50%);
 }
 
 html {
@@ -28,7 +79,7 @@ html {
 .section-title {
   text-align: center;
   font-size: 2.5rem;
-  color: #1e3a5f;
+  color: var(--primary-color);
   margin-bottom: 3rem;
   font-weight: 700;
   
@@ -39,15 +90,30 @@ html {
 
 // Page hero styles (used across multiple pages)
 .page-hero {
-  background: linear-gradient(135deg, #1e3a5f 0%, #2c5aa0 100%);
+  background: var(--gradient-primary);
   color: white;
   text-align: center;
   padding: 150px 0 100px;
   margin-top: 80px; // Account for fixed header
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffffff" fill-opacity="0.1"><circle cx="30" cy="30" r="1"/></g></svg>');
+    opacity: 0.3;
+  }
   
   h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
     font-weight: 700;
     
     @media (max-width: 768px) {
@@ -77,11 +143,11 @@ html {
   text-align: center;
   
   &.btn-primary {
-    background: linear-gradient(135deg, #ff7043 0%, #ff5722 100%);
+    background: linear-gradient(135deg, var(--accent-color) 0%, #d84315 100%);
     color: white;
     
     &:hover {
-      background: linear-gradient(135deg, #ff5722 0%, #d84315 100%);
+      background: linear-gradient(135deg, #d84315 0%, #bf360c 100%);
       transform: translateY(-3px);
       box-shadow: 0 10px 25px rgba(255, 87, 34, 0.3);
     }
@@ -89,35 +155,66 @@ html {
   
   &.btn-secondary {
     background: transparent;
-    color: #1e3a5f;
-    border: 2px solid #1e3a5f;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
     
     &:hover {
-      background: #1e3a5f;
+      background: var(--primary-color);
       color: white;
       transform: translateY(-3px);
     }
   }
   
   &.btn-white {
-    background: white;
-    color: #1e3a5f;
+    background: var(--card-background);
+    color: var(--primary-color);
     
     &:hover {
-      background: #f5f5f5;
+      background: var(--background-secondary);
       transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 10px 25px var(--shadow);
     }
+  }
+}
+
+// Theme Toggle Button
+.theme-toggle {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  z-index: 1000;
+  background: var(--card-background);
+  border: 2px solid var(--border-color);
+  border-radius: 50px;
+  padding: 12px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px var(--shadow);
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--shadow);
+  }
+  
+  .toggle-icon {
+    font-size: 18px;
   }
 }
 
 // Card styles (global)
 .card {
-  background: white;
+  background: var(--card-background);
   border-radius: 15px;
   padding: 30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  box-shadow: 0 10px 30px var(--shadow);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border-color);
   
   &:hover {
     transform: translateY(-5px);
@@ -132,21 +229,23 @@ html {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
-    color: #1e3a5f;
+    color: var(--text-primary);
   }
   
   input, select, textarea {
     width: 100%;
     padding: 12px 15px;
-    border: 2px solid #e9ecef;
+    border: 2px solid var(--border-color);
     border-radius: 8px;
     font-size: 16px;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    background: var(--card-background);
+    color: var(--text-primary);
     
     &:focus {
       outline: none;
-      border-color: #ff7043;
-      box-shadow: 0 0 0 3px rgba(255, 112, 67, 0.1);
+      border-color: var(--accent-color);
+      box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
     }
   }
   
@@ -219,9 +318,67 @@ img {
 
 // Links
 a {
-  color: #ff7043;
+  color: var(--accent-color);
   text-decoration: none;
   transition: color 0.3s ease;
+  
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+
+// Modal/Popup styles
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background: var(--card-background);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  animation: modalAppear 0.3s ease;
+}
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  
+  &:hover {
+    color: var(--text-primary);
+  }
+}
   
   &:hover {
     color: #ff5722;
