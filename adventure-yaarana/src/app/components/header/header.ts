@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { ThemeService } from '../../services/theme.service';
 
 interface NavigationLink {
   label: string;
@@ -14,8 +15,9 @@ interface NavigationLink {
   templateUrl: './header.html',
   styleUrls: ['./header.scss']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   isMenuOpen = false;
+  isDarkMode = false;
 
   // Company Information
   companyInfo = {
@@ -34,11 +36,23 @@ export class HeaderComponent {
     { label: 'Contact Us', route: '/contact', isContactButton: true }
   ];
 
+  constructor(private themeService: ThemeService) {}
+
+  ngOnInit() {
+    this.themeService.isDarkMode$.subscribe(isDark => {
+      this.isDarkMode = isDark;
+    });
+  }
+
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
   closeMenu() {
     this.isMenuOpen = false;
+  }
+
+  toggleTheme() {
+    this.themeService.toggleTheme();
   }
 }
