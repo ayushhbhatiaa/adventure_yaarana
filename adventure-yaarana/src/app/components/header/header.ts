@@ -13,7 +13,7 @@ interface NavigationLink {
   selector: 'app-header',
   imports: [RouterModule, CommonModule],
   templateUrl: './header.html',
-  styleUrls: ['./header.scss']
+  styleUrls: ['./header.css']
 })
 export class HeaderComponent implements OnInit {
   isMenuOpen = false;

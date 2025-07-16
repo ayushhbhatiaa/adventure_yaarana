@@ -19,7 +19,7 @@ interface Destination {
   selector: 'app-home',
   imports: [RouterModule, CommonModule],
   templateUrl: './home.html',
-  styleUrls: ['./home.scss']
+  styleUrls: ['./home.css']
 })
 export class HomeComponent {
   isDestinationModalOpen = false;
