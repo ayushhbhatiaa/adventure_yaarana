@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit {
   // Company Information
   companyInfo = {
     name: 'Adventure Yaarana',
-    logoPath: 'assets/logo.svg'
+    logoPath: 'assets/images/adv.jpg'
   };
 
   // Navigation Links
@@ -31,7 +31,7 @@ export class HeaderComponent implements OnInit {
     { label: 'About', route: '/about' },
     { label: 'Our Trips', route: '/trips' },
     { label: 'Services', route: '/services' },
-    { label: 'Gallery', route: '/gallery' },
+    // { label: 'Gallery', route: '/gallery' },
     { label: 'Adventure Vault', route: '/adventure-vault' },
     { label: 'Blog', route: '/blog' },
     { label: 'Contact Us', route: '/contact', isContactButton: true }

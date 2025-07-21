@@ -27,16 +27,18 @@ interface SocialLink {
   selector: 'app-footer',
   imports: [RouterModule, CommonModule],
   templateUrl: './footer.html',
-  styleUrls: ['./footer.scss']
+  styleUrls: ['./footer.scss'],
 })
 export class FooterComponent {
   // Company Information
   companyInfo = {
     name: 'Adventure Yaarana',
-    logoPath: 'assets/logo.svg',
-    description: 'Creating unforgettable travel experiences since 2020. Your adventure, our expertise.',
+    // logoPath: 'assets/logo.svg',
+    logoPath: 'assets/images/adv.jpg',
+    description:
+      'Creating unforgettable travel experiences since 2020. Your adventure, our expertise.',
     establishedYear: 2020,
-    currentYear: new Date().getFullYear()
+    currentYear: new Date().getFullYear(),
   };
 
   // Navigation Links
@@ -45,8 +47,9 @@ export class FooterComponent {
     { label: 'About Us', route: '/about' },
     { label: 'Our Trips', route: '/trips' },
     { label: 'Services', route: '/services' },
-    { label: 'Gallery', route: '/gallery' },
-    { label: 'Blog', route: '/blog' }
+    // { label: 'Gallery', route: '/gallery' },
+    { label: 'Adventure Vault', route: '/adventure-vault' },
+    { label: 'Blog', route: '/blog' },
   ];
 
   // Services List
@@ -56,28 +59,49 @@ export class FooterComponent {
     { name: 'Couple Adventures' },
     { name: 'Friends Getaway' },
     { name: 'Group Tours' },
-    { name: 'Custom Packages' }
+    { name: 'Custom Packages' },
   ];
 
   // Contact Information
   contactInfo: ContactInfo[] = [
     { icon: '📧', text: 'info@adventureyaarana.com' },
-    { icon: '📞', text: '+91 98765 43210' },
-    { icon: '📍', text: 'Mumbai, Maharashtra, India' }
+    { icon: '📞', text: '+91 941 6796 889' },
+    { icon: '📞', text: '+91 999 9999 XXX' },
+    { icon: '📍', text: '123/4 Rajiv Chowk, Delhi, India' },
   ];
 
   // Social Media Links
   socialLinks: SocialLink[] = [
-    { platform: 'facebook', icon: '📘', url: 'https://facebook.com/adventureyaarana', ariaLabel: 'Facebook' },
-    { platform: 'instagram', icon: '📷', url: 'https://instagram.com/adventureyaarana', ariaLabel: 'Instagram' },
-    { platform: 'twitter', icon: '🐦', url: 'https://twitter.com/adventureyaarana', ariaLabel: 'Twitter' },
-    { platform: 'youtube', icon: '📺', url: 'https://youtube.com/adventureyaarana', ariaLabel: 'YouTube' }
+    {
+      platform: 'facebook',
+      icon: '📘',
+      url: 'https://facebook.com/adventure_yaarana',
+      ariaLabel: 'Facebook',
+    },
+    {
+      platform: 'instagram',
+      icon: '📷',
+      url: 'https://instagram.com/adventure_yaarana',
+      ariaLabel: 'Instagram',
+    },
+    {
+      platform: 'twitter',
+      icon: '🐦',
+      url: 'https://twitter.com/adventure_yaarana',
+      ariaLabel: 'Twitter',
+    },
+    {
+      platform: 'youtube',
+      icon: '📺',
+      url: 'https://youtube.com/adventure_yaarana',
+      ariaLabel: 'YouTube',
+    },
   ];
 
   // Footer Bottom Text
   legalInfo = {
     copyrightText: `© ${this.companyInfo.currentYear} ${this.companyInfo.name}. All rights reserved.`,
     privacyPolicy: 'Privacy Policy',
-    termsOfService: 'Terms of Service'
+    termsOfService: 'Terms of Service',
   };
 }

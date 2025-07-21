@@ -17,6 +17,17 @@
   margin-bottom: 40px;
 }
 
+.foot-service:hover {
+  cursor: pointer;
+  color: #b3c6d9;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #ffab40;
+  }
+}
+
 .footer-section {
   h3 {
     color: #ffab40;
@@ -24,20 +35,20 @@
     font-size: 18px;
     font-weight: 600;
   }
-  
+
   ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    
+
     li {
       margin-bottom: 10px;
-      
+
       a {
         color: #b3c6d9;
         text-decoration: none;
         transition: color 0.3s ease;
-        
+
         &:hover {
           color: #ffab40;
         }
@@ -51,7 +62,7 @@
     height: 80px;
     margin-bottom: 15px;
   }
-  
+
   p {
     color: #b3c6d9;
     line-height: 1.6;
@@ -61,13 +72,14 @@
 
 .contact-info {
   margin-bottom: 20px;
-  
+  cursor: pointer;
+
   p {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
     color: #b3c6d9;
-    
+
     .icon {
       margin-right: 10px;
       font-size: 16px;
@@ -78,7 +90,8 @@
 .social-links {
   display: flex;
   gap: 15px;
-  
+  cursor: pointer;
+
   a {
     display: inline-block;
     width: 40px;
@@ -89,7 +102,7 @@
     line-height: 40px;
     font-size: 18px;
     transition: all 0.3s ease;
-    
+
     &:hover {
       background: #ffab40;
       transform: translateY(-3px);
@@ -101,7 +114,7 @@
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 20px;
   text-align: center;
-  
+
   p {
     color: #b3c6d9;
     margin: 0;
@@ -114,7 +127,7 @@
     grid-template-columns: 1fr;
     gap: 30px;
   }
-  
+
   .footer-container {
     padding: 40px 20px 20px;
   }

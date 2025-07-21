@@ -1,7 +1,7 @@
 <div class="adventure-vault">
   <!-- Hero Section -->
   <section class="page-hero">
-    <div class="container">
+    <div class="container d-flex flex-column justify-content-center align-items-center">
       <h1>{{ pageInfo.title }}</h1>
       <p class="hero-subtitle">{{ pageInfo.subtitle }}</p>
       <p class="hero-description">{{ pageInfo.description }}</p>
@@ -11,7 +11,7 @@
   <!-- Category Filter Section -->
   <section class="filter-section">
     <div class="container">
-      <h2 class="filter-title">Explore by Category</h2>
+      <h2 class="section-title">Explore by Category</h2>
       <div class="category-filters">
         <button 
           *ngFor="let category of categories" 

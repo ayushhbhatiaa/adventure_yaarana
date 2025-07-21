@@ -4,19 +4,25 @@
     <div class="hero-container">
       <div class="hero-content">
         <h1 class="hero-title">Adventure Awaits with <span class="highlight">Yaarana</span></h1>
-        <p class="hero-subtitle">Discover amazing destinations, create unforgettable memories, and embark on the journey of a lifetime with your closest companions.</p>
+        <p class="hero-subtitle">Discover amazing destinations, create unforgettable memories, and embark on the journey
+          of a lifetime with your closest companions.</p>
         <div class="hero-buttons">
           <a routerLink="/trips" class="btn btn-primary">Explore Trips</a>
           <a routerLink="/contact" class="btn btn-secondary">Plan Your Adventure</a>
         </div>
       </div>
       <div class="hero-image">
-        <div class="hero-card">
-          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Adventure Yaarana - Mountain Adventure" class="hero-adventure-img">
-          <div class="hero-logo-overlay">
-            <img src="assets/logo.svg" alt="Adventure Yaarana Logo" class="hero-logo">
-          </div>
+        <div class="logo-border">
+          <img src="assets/images/adv.jpg" alt="Adventure Yaarana Logo" class="hero-logo">
         </div>
+        <!-- <div class="hero-card">
+          <img
+            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Adventure Yaarana - Mountain Adventure" class="hero-adventure-img">
+          <div class="hero-logo-overlay">
+            <img src="assets/images/adv.jpg" alt="Adventure Yaarana Logo" class="hero-logo rounded-circle" width="auto">
+          </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -26,11 +32,11 @@
     <div class="container">
       <h2 class="section-title">Why Choose Adventure Yaarana?</h2>
       <div class="features-grid">
-        <div class="feature-card">
+        <!-- <div class="feature-card">
           <div class="feature-icon">🎯</div>
           <h3>Customized Trips</h3>
           <p>Tailored adventures designed specifically for your group's preferences and budget.</p>
-        </div>
+        </div> -->
         <div class="feature-card">
           <div class="feature-icon">👥</div>
           <h3>Expert Guides</h3>
@@ -46,6 +52,62 @@
           <h3>Safe & Secure</h3>
           <p>Your safety is our priority with comprehensive insurance and emergency support.</p>
         </div>
+
+        <!-- new cards -->
+        <div class="feature-card">
+          <div class="feature-icon">🌍</div>
+          <h3>Wide Destination Coverage</h3>
+          <p>Explore an extensive range of domestic and international destinations to satisfy your wanderlust.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🕐</div>
+          <h3>24/7 Support</h3>
+          <p>Our travel support team is always available to assist you before, during, and after your trip.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🚌</div>
+          <h3>Seamless Travel Experience</h3>
+          <p>From transport to stays, we handle it all to make your trip smooth and stress-free.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📸</div>
+          <h3>Instagrammable Moments</h3>
+          <p>Capture amazing moments at scenic spots, curated for your feed-worthy memories.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🍽️</div>
+          <h3>Local Food & Culture</h3>
+          <p>Experience authentic local flavors and cultural delights with our expert-planned itineraries.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🧳</div>
+          <h3>Group & Solo Friendly</h3>
+          <p>Customizable packages for solo travelers, couples, friends, and big groups alike.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🏕️</div>
+          <h3>Unique Stay Options</h3>
+          <p>Tree houses, riverside camps, and boutique resorts—handpicked for comfort and vibe.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📅</div>
+          <h3>Fully Planned Itineraries</h3>
+          <p>Enjoy your vacation without worries—we plan every detail from activities to meals.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🏆</div>
+          <h3>Top Rated Experiences</h3>
+          <p>Loved by thousands—our tours consistently receive 4.9+ star ratings.</p>
+        </div>
+
       </div>
     </div>
   </section>
@@ -55,6 +117,17 @@
     <div class="container">
       <h2 class="section-title">Our Travel Services</h2>
       <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🧳</div>
+          <h3>Solo Travel Experiences</h3>
+          <p>Personalized solo travel plans for adventures seeking freedom, exploration and self discovery.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">👨‍👩‍👧‍👦</div>
+          <h3>Family Getaways</h3>
+          <p>Enjoy stress freee vacations with custom-designed packages perfect for families, ensuring fun for all age
+            group.</p>
+        </div>
         <div class="service-card">
           <div class="service-icon">🏢</div>
           <h3>Corporate Trips</h3>
@@ -76,7 +149,7 @@
           <p>Organized tours for large groups with special arrangements and group discounts.</p>
         </div>
       </div>
-      <div class="text-center">
+      <div class="text-center mt-5">
         <a routerLink="/services" class="btn btn-primary">View All Services</a>
       </div>
     </div>
@@ -89,7 +162,9 @@
       <div class="destinations-grid">
         <div class="destination-card" (click)="openDestinationModal('goa')">
           <div class="destination-image">
-            <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Goa Beach Paradise">
+            <img
+              src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Goa Beach Paradise">
           </div>
           <div class="destination-content">
             <h3>Goa Beach Paradise</h3>
@@ -99,7 +174,9 @@
         </div>
         <div class="destination-card" (click)="openDestinationModal('himalaya')">
           <div class="destination-image">
-            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Himalayan Trek">
+            <img
+              src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Himalayan Trek">
           </div>
           <div class="destination-content">
             <h3>Himalayan Trek</h3>
@@ -109,7 +186,9 @@
         </div>
         <div class="destination-card" (click)="openDestinationModal('rajasthan')">
           <div class="destination-image">
-            <img src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Rajasthan Royal Tour">
+            <img
+              src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Rajasthan Royal Tour">
           </div>
           <div class="destination-content">
             <h3>Rajasthan Royal Tour</h3>
@@ -118,7 +197,7 @@
           </div>
         </div>
       </div>
-      <div class="text-center">
+      <div class="text-center mt-5">
         <a routerLink="/trips" class="btn btn-primary">View All Trips</a>
       </div>
     </div>
@@ -129,7 +208,8 @@
     <div class="container">
       <div class="cta-content">
         <h2>Ready for Your Next Adventure?</h2>
-        <p>Let us help you create memories that will last a lifetime. Contact us today to start planning your perfect trip!</p>
+        <p>Let us help you create memories that will last a lifetime. Contact us today to start planning your perfect
+          trip!</p>
         <a routerLink="/contact" class="btn btn-white">Get Started Today</a>
       </div>
     </div>
@@ -141,22 +221,28 @@
       <h2 class="section-title">About Adventure Yaarana</h2>
       <div class="about-preview">
         <div class="about-summary">
-          <p class="about-intro">Founded by passionate travelers, Adventure Yaarana creates exceptional travel experiences that bring people together and inspire lasting friendships. We believe in authentic adventures, sustainable tourism, and building genuine yaarana (friendship) among travelers.</p>
+          <p class="about-intro">Founded by passionate travelers, Adventure Yaarana creates exceptional travel
+            experiences that bring people together and inspire lasting friendships. We believe in authentic adventures,
+            sustainable tourism, and building genuine yaarana (friendship) among travelers.</p>
           <div class="about-stats">
             <div class="stat-item">
               <div class="stat-number">500+</div>
-              <div class="stat-label">Happy Travelers</div>
+              <div class="stat-label">Happy Travellers</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">100+</div>
+              <div class="stat-label">Trips Completed</div>
             </div>
             <div class="stat-item">
               <div class="stat-number">50+</div>
-              <div class="stat-label">Destinations</div>
+              <div class="stat-label">Destinations Covered</div>
             </div>
             <div class="stat-item">
               <div class="stat-number">5+</div>
               <div class="stat-label">Years Experience</div>
             </div>
           </div>
-          <div class="text-center">
+          <div class="text-center mt-5">
             <a routerLink="/about" class="btn btn-primary">Learn More About Us</a>
           </div>
         </div>
@@ -171,7 +257,8 @@
     <div class="container">
       <h2 class="section-title">Meet Our Expert Team</h2>
       <div class="team-intro">
-        <p>Our passionate team of travel experts is dedicated to creating unforgettable adventures for you. From experienced guides to dedicated support staff, we're here to make your journey extraordinary.</p>
+        <p>Our passionate team of travel experts is dedicated to creating unforgettable adventures for you. From
+          experienced guides to dedicated support staff, we're here to make your journey extraordinary.</p>
         <div class="team-highlights">
           <div class="team-stat">
             <span class="stat-icon">👨‍💼</span>
@@ -200,20 +287,25 @@
       <div class="trips-grid">
         <div class="trip-card featured">
           <div class="trip-image">
-            <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Manali Adventure Trip">
+            <img
+              src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Manali Adventure Trip">
             <div class="trip-badge">Featured</div>
           </div>
           <div class="trip-content">
             <h3>Manali Adventure Escape</h3>
             <p class="trip-duration">5 Days / 4 Nights</p>
-            <p>Experience the thrill of paragliding, river rafting, and mountain biking in the beautiful valley of Manali.</p>
+            <p>Experience the thrill of paragliding, river rafting, and mountain biking in the beautiful valley of
+              Manali.</p>
             <div class="trip-price">₹18,999 <span>/person</span></div>
             <a routerLink="/trips" class="btn btn-primary">View Details</a>
           </div>
         </div>
         <div class="trip-card">
           <div class="trip-image">
-            <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Rishikesh Yoga Retreat">
+            <img
+              src="https://images.unsplash.com/photo-1720819029162-8500607ae232?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Rishikesh Yoga Retreat">
           </div>
           <div class="trip-content">
             <h3>Rishikesh Yoga Retreat</h3>
@@ -225,7 +317,9 @@
         </div>
         <div class="trip-card">
           <div class="trip-image">
-            <img src="https://images.unsplash.com/photo-1562602833-0f4ab2fc46e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kerala Backwaters">
+            <img
+              src="https://images.unsplash.com/photo-1624554305378-0f440dd3a8c1?q=80&w=825&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Kerala Backwaters">
           </div>
           <div class="trip-content">
             <h3>Kerala Backwaters</h3>
@@ -236,7 +330,7 @@
           </div>
         </div>
       </div>
-      <div class="text-center">
+      <div class="text-center mt-5">
         <a routerLink="/trips" class="btn btn-primary">View All Trips</a>
       </div>
     </div>
@@ -287,43 +381,55 @@
       <h2 class="section-title">Travel Gallery</h2>
       <div class="gallery-grid">
         <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Mountain Adventure">
+          <img
+            src="https://images.unsplash.com/photo-1552224106-8edd485eff51?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Mountain Adventure">
           <div class="gallery-overlay">
             <h4>Mountain Adventures</h4>
           </div>
         </div>
         <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Beach Paradise">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1726873432906-78a9a7c4975b?q=80&w=752&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Beach Paradise">
           <div class="gallery-overlay">
             <h4>Beach Paradise</h4>
           </div>
         </div>
         <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Cultural Heritage">
+          <img
+            src="https://images.unsplash.com/photo-1681731030636-8f09daaa2bf3?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Cultural Heritage">
           <div class="gallery-overlay">
             <h4>Cultural Heritage</h4>
           </div>
         </div>
         <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Wildlife Safari">
+          <img
+            src="https://images.unsplash.com/photo-1507633510639-d1ba39da8509?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Wildlife Safari">
           <div class="gallery-overlay">
             <h4>Wildlife Safari</h4>
           </div>
         </div>
         <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Desert Expedition">
+          <img
+          src="https://plus.unsplash.com/premium_photo-1697729825269-34ebf9010f22?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Desert Expedition">
           <div class="gallery-overlay">
             <h4>Desert Expedition</h4>
           </div>
         </div>
         <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Adventure Sports">
+          <img
+            src="https://images.unsplash.com/photo-1591007232007-b26dfbbc9a9a?q=80&w=518&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Adventure Sports">
           <div class="gallery-overlay">
             <h4>Adventure Sports</h4>
           </div>
         </div>
       </div>
-      <div class="text-center">
+      <div class="text-center mt-5">
         <a routerLink="/gallery" class="btn btn-primary">View Full Gallery</a>
       </div>
     </div>
@@ -336,39 +442,48 @@
       <div class="blog-grid">
         <div class="blog-card">
           <div class="blog-image">
-            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Travel Tips">
+            <img
+              src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+              alt="Travel Tips">
           </div>
           <div class="blog-content">
             <div class="blog-date">December 15, 2024</div>
             <h3>Essential Packing Tips for Mountain Treks</h3>
-            <p>Discover what to pack for your next mountain adventure to stay comfortable and safe throughout your journey.</p>
+            <p>Discover what to pack for your next mountain adventure to stay comfortable and safe throughout your
+              journey.</p>
             <a routerLink="/blog" class="blog-link">Read More</a>
           </div>
         </div>
         <div class="blog-card">
           <div class="blog-image">
-            <img src="https://images.unsplash.com/photo-1502602898536-47ad22581b52?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Group Travel">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1661515225362-962f242e1346?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Group Travel">
           </div>
           <div class="blog-content">
             <div class="blog-date">December 10, 2024</div>
             <h3>Best Group Travel Destinations in India</h3>
-            <p>Explore the top destinations perfect for group travelers looking for adventure, culture, and unforgettable experiences.</p>
+            <p>Explore the top destinations perfect for group travelers looking for adventure, culture, and
+              unforgettable experiences.</p>
             <a routerLink="/blog" class="blog-link">Read More</a>
           </div>
         </div>
         <div class="blog-card">
           <div class="blog-image">
-            <img src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Budget Travel">
+            <img
+              src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+              alt="Budget Travel">
           </div>
           <div class="blog-content">
             <div class="blog-date">December 5, 2024</div>
             <h3>Budget-Friendly Adventure Travel</h3>
-            <p>Learn how to have amazing adventures without breaking the bank with our expert tips and destination recommendations.</p>
+            <p>Learn how to have amazing adventures without breaking the bank with our expert tips and destination
+              recommendations.</p>
             <a routerLink="/blog" class="blog-link">Read More</a>
           </div>
         </div>
       </div>
-      <div class="text-center">
+      <div class="text-center mt-5">
         <a routerLink="/blog" class="btn btn-primary">Read All Posts</a>
       </div>
     </div>
@@ -378,7 +493,7 @@
   <div class="modal-overlay" *ngIf="isDestinationModalOpen" (click)="closeDestinationModal()">
     <div class="modal-content" (click)="$event.stopPropagation()" *ngIf="selectedDestination">
       <button class="modal-close" (click)="closeDestinationModal()" aria-label="Close modal">×</button>
-      
+
       <div class="modal-header">
         <img [src]="selectedDestination.image" [alt]="selectedDestination.name" class="modal-image">
         <div class="modal-title-section">
@@ -387,17 +502,17 @@
           <div class="modal-price">{{ selectedDestination.price }}</div>
         </div>
       </div>
-      
+
       <div class="modal-body">
         <p class="modal-description">{{ selectedDestination.description }}</p>
-        
+
         <div class="modal-highlights">
           <h3>Highlights</h3>
           <ul>
             <li *ngFor="let highlight of selectedDestination.highlights">{{ highlight }}</li>
           </ul>
         </div>
-        
+
         <div class="modal-details">
           <div class="detail-item">
             <strong>Duration:</strong> {{ selectedDestination.duration }}
@@ -409,7 +524,7 @@
             <strong>Difficulty:</strong> {{ selectedDestination.difficulty }}
           </div>
         </div>
-        
+
         <div class="modal-actions">
           <a routerLink="/contact" class="btn btn-primary" (click)="closeDestinationModal()">Book Now</a>
           <a routerLink="/trips" class="btn btn-secondary" (click)="closeDestinationModal()">View All Trips</a>

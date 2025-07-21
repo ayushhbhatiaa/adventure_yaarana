@@ -3,7 +3,7 @@
     <div class="footer-content">
       <div class="footer-section">
         <div class="footer-logo">
-          <img [src]="companyInfo.logoPath" [alt]="companyInfo.name" class="logo">
+          <img [src]="companyInfo.logoPath" [alt]="companyInfo.name" class="logo rounded-circle">
           <p>{{ companyInfo.description }}</p>
         </div>
       </div>
@@ -18,7 +18,7 @@
       <div class="footer-section">
         <h3>Services</h3>
         <ul>
-          <li *ngFor="let service of services">{{ service.name }}</li>
+          <li class="foot-service" *ngFor="let service of services">{{ service.name }}</li>
         </ul>
       </div>
       

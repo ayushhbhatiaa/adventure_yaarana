@@ -14,7 +14,7 @@ export const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'trips', component: TripsComponent },
   { path: 'services', component: ServicesComponent },
-  { path: 'gallery', component: GalleryComponent },
+  // { path: 'gallery', component: GalleryComponent },
   { path: 'adventure-vault', component: AdventureVaultComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'contact', component: ContactComponent },

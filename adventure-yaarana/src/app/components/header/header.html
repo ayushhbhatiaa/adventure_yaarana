@@ -3,7 +3,7 @@
     <div class="nav-container">
       <div class="nav-logo">
         <a routerLink="/">
-          <img [src]="companyInfo.logoPath" [alt]="companyInfo.name" class="logo">
+          <img [src]="companyInfo.logoPath" [alt]="companyInfo.name" class="logo rounded-circle">
         </a>
       </div>
       
@@ -17,7 +17,7 @@
         <!-- Theme Toggle Button -->
         <button class="theme-toggle-nav" (click)="toggleTheme()" [attr.aria-label]="isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'">
           <span class="toggle-icon">{{ isDarkMode ? '☀️' : '🌙' }}</span>
-          <span class="toggle-text">{{ isDarkMode ? 'Light' : 'Dark' }}</span>
+          <!-- <span class="toggle-text">{{ isDarkMode ? 'Light' : 'Dark' }}</span> -->
         </button>
       </div>
       
