@@ -124,7 +124,7 @@
   .included-border {
     width: 120px;
     height: 120px;
-    border: 2px solid #d84315;
+    border: 3px solid #d84315;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -139,6 +139,7 @@
   }
 
   .included-icon {
+    // margin-top: 2px;
     width: 100px;
     height: 100px;
     background: #2c2c3c;
