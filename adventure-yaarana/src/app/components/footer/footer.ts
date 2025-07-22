@@ -64,10 +64,10 @@ export class FooterComponent {
 
   // Contact Information
   contactInfo: ContactInfo[] = [
-    { icon: '📧', text: 'info@adventureyaarana.com' },
+    { icon: '📧', text: 'adventureyaarana@gmail.com' },
     { icon: '📞', text: '+91 941 6796 889' },
     { icon: '📞', text: '+91 999 9999 XXX' },
-    { icon: '📍', text: '123/4 Rajiv Chowk, Delhi, India' },
+    { icon: '📍', text: 'Shop no. 1B - 5/762, Baba Colony, Burari, Delhi, India, 110084' },
   ];
 
   // Social Media Links

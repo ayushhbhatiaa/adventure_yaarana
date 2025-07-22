@@ -50,7 +50,7 @@ export class ContactComponent implements OnInit {
     {
       icon: '📧',
       title: 'Email Us',
-      details: ['info@adventure_yaarana.com', 'support@adventure_yaarana.com'],
+      details: ['adventureyaarana@gmail.com','info@adventureyaarana.com'],
     },
     {
       icon: '📞',
@@ -60,7 +60,7 @@ export class ContactComponent implements OnInit {
     {
       icon: '📍',
       title: 'Visit Us',
-      details: ['123/4 Rajiv Chowk,', '400001,', 'Delhi, India'],
+      details: ['Shop no. 1B - 5/762,', 'Baba Colony, Burari', 'Delhi, India', '110084'],
     },
     {
       icon: '🕒',
@@ -98,7 +98,7 @@ export class ContactComponent implements OnInit {
     {
       platform: 'facebook',
       icon: '📘',
-      url: 'https://facebook.com/adventure_yaarana',
+      url: 'https://facebook.com/adventureyaarana',
       ariaLabel: 'Facebook',
     },
     {
@@ -110,13 +110,13 @@ export class ContactComponent implements OnInit {
     {
       platform: 'twitter',
       icon: '🐦',
-      url: 'https://twitter.com/adventure_yaarana',
+      url: 'https://twitter.com/adventureyaarana',
       ariaLabel: 'Twitter',
     },
     {
       platform: 'youtube',
       icon: '📺',
-      url: 'https://youtube.com/adventure_yaarana',
+      url: 'https://youtube.com/adventureyaarana',
       ariaLabel: 'YouTube',
     },
     {
@@ -131,8 +131,8 @@ export class ContactComponent implements OnInit {
   mapInfo = {
     title: 'Find Us',
     sectionTitle: '📍 Our Location',
-    address: '123 Adventure Street, Colaba, Mumbai - 400001',
-    landmark: 'Near Gateway of India & Taj Hotel',
+    address: 'Shop no. 1B - 5/762, Baba Colony, Burari',
+    landmark: 'Delhi, India, 110084'
   };
 
   showModal: boolean = false;

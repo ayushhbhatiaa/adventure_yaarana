@@ -22,6 +22,7 @@
 .container {
   background: rgba(255, 255, 255, 0.05);
   padding: 40px 30px;
+  margin-top: 2rem;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   // max-width: ;
@@ -70,6 +71,9 @@ h1 {
 .filter-section {
   padding: 6rem 1rem 4rem 1rem;
   background: var(--background-secondary);
+  @media (max-width:768px) {
+    padding: 1rem 1rem 2rem 1rem;
+  }  
 
   .filter-title {
     text-align: center;
@@ -168,19 +172,23 @@ h1 {
 .gallery-section {
   padding: 6rem 1rem 4rem 1rem;
 
+   @media (max-width:768px) {
+    padding: 1rem 1rem 2rem 1rem;
+  }
+
   .photo-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 30px;
+    gap: 3rem;
 
     @media (max-width: 768px) {
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 20px;
+      gap: 2rem;
     }
 
     @media (max-width: 480px) {
       grid-template-columns: 1fr;
-      gap: 15px;
+      gap: 1.5rem;
     }
   }
 
